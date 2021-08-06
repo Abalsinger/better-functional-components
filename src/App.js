@@ -1,6 +1,27 @@
 import './App.css';
 import { data } from "./SpeakerData.js";
 
+//or Session({title, room})
+function Session(props) {
+    const title = props.title;
+    const room = props.room;
+    return (
+        <span className="session w-100">
+            {title} <strong>Room: {room}</strong>
+        </span>
+        );
+}
+
+function Sessions({ sessions }) {
+    return (
+        <div className="sessionBox card h-250">
+            <Session title={sessions[0].title} room={sessions[0].room.name} />
+        </div>
+    );
+}
+
+//IndexPage component consumes Sessions component & Sessions consumes Session
+
 function IndexPage() {
 
     return (
@@ -29,11 +50,7 @@ function IndexPage() {
                                         <p> {bio} {company} {twitterHandle} {favorite}</p>
                                     </div>
                                 </div>
-                                <div className="sessionBox card h-250">
-                                    <span className="session w-100">
-                                        {sessions[0].title} <strong>Room: {sessions[0].room.name}</strong>
-                                    </span>
-                                </div>
+                                <Sessions sessions={sessions} />
                             </div>
                         </div>
                         )

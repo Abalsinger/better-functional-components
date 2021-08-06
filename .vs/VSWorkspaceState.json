@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
+    "\\public\\images",
     "\\src"
   ],
-  "SelectedNode": "\\public\\robots.txt",
+  "SelectedNode": "\\src\\SpeakerData.js",
   "PreviewInSolutionExplorer": false
 }
