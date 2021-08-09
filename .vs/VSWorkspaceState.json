@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\public\\images",
-    "\\src"
+    "\\src",
+    "\\src\\components"
   ],
+  "SelectedNode": "\\src\\components\\Speaker.js",
   "PreviewInSolutionExplorer": false
 }
